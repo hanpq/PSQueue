@@ -1,6 +1,9 @@
 BeforeDiscovery {
-        $RootItem = Get-Item $PSScriptRoot
-    while ($RootItem.GetDirectories().Name -notcontains "source") {$RootItem = $RootItem.Parent}
+    $RootItem = Get-Item $PSScriptRoot
+    while ($RootItem.GetDirectories().Name -notcontains 'source')
+    {
+        $RootItem = $RootItem.Parent
+    }
     $ProjectPath = $RootItem.FullName
     $ProjectName = (Get-ChildItem $ProjectPath\*\*.psd1 | Where-Object {
             ($_.Directory.Name -eq 'source') -and
@@ -19,7 +22,9 @@ BeforeDiscovery {
 }
 
 InModuleScope $ProjectName {
-    Describe -Name 'Initialize-Queue.ps1' -Fixture {
+    Describe 'Add-QueueItem' {
+    }
+    Describe 'Initialize-Queue' -Fixture {
         Context -Name 'When calling Initialize-Queue' {
             BeforeAll {
                 $Queue = Initialize-Queue
@@ -58,4 +63,9 @@ InModuleScope $ProjectName {
             }
         }
     }
+    Describe 'Clear-AllQueueItems' {}
+    Describe 'Get-AllQueueItems' {}
+    Describe 'Get-NextQueueItem' {}
+    Describe 'Measure-Queue' {}
+    Describe 'Show-NextQueueItem' {}
 }
