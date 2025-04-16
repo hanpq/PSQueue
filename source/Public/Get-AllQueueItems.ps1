@@ -15,6 +15,6 @@
         [parameter(Mandatory)][ExtendedQueue]$Queue
     )
 
-    $Queue.GetAllQueuedItems()
+    $Queue.GetAllQueueItems()
 
 }
