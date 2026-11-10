@@ -3,6 +3,13 @@
 The format is based on and uses the types of changes according to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.2-beta001](https://github.com/hanpq/PSQueue/compare/v1.5.0...v1.5.2-beta001) (2026-11-10)
+
+
+### Bug Fixes
+
+* prepare 1.5.2-beta001 release ([bacc7d9](https://github.com/hanpq/PSQueue/commit/bacc7d9ccf42938be99a2ad0cbc91c1c9b5d1fac))
+
 ## [Unreleased]
 
 ## [1.5.0] - 2023-01-12
