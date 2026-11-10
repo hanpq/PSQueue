@@ -8,7 +8,7 @@
 
 @{
     RootModule           = 'PSQueue.psm1'
-    ModuleVersion        = '0.0.1'
+    ModuleVersion        = '1.5.0'
     CompatiblePSEditions = @('Desktop', 'Core')
     PowerShellVersion    = '5.1'
     GUID                 = 'ba821fed-a721-459e-825b-1c87090f36ea'
